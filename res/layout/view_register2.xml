@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1" >
+
+            <TableRow android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:gravity="right"
+                    android:text="@string/email"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/register_email"
+                    android:layout_margin="4dp"
+                    android:inputType="textEmailAddress"
+                    android:scrollHorizontally="true" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:text="@string/username"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/register_username"
+                    android:layout_margin="4dp"
+                    android:inputType="textUri"
+                    android:scrollHorizontally="true" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:text="@string/password"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/register_password"
+                    android:layout_margin="4dp"
+                    android:inputType="textPassword"
+                    android:scrollHorizontally="true" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:text="@string/again"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/register_password2"
+                    android:layout_margin="4dp"
+                    android:inputType="textPassword"
+                    android:scrollHorizontally="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="20dp"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/register_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/already_registered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:onClick="doLogin"
+            android:text="@string/already_registered" />
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clipLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
+
+    <ImageView
+        android:id="@+id/micButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/recordAudio"
+        android:src="@drawable/mic_selector" />
+
+    <ImageView
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/imageview_selector"
+        android:contentDescription="@string/cancel"
+        android:src="@drawable/cancel" />
+
+    <EditText
+        android:id="@+id/editTitle"
+        style="@style/lightEditTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_toLeftOf="@+id/micButton"
+        android:layout_toRightOf="@+id/cancelButton"
+        android:hint="@string/title"
+        android:inputType="textShortMessage"
+        android:maxLength="100"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTitle"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/clip" />
+
+</RelativeLayout>

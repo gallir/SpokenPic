@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="entries_preference_audio">
+        <item>@string/preferences_default</item>
+        <item>@string/preferences_better</item>
+        <item>@string/preferences_high</item>
+        <item>@string/preferences_very_high</item>
+        </string-array>
+
+    <string-array name="entries_preference_audio_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        </string-array>
+
+        <string-array name="entries_preference_image">
+        <item>@string/preferences_default</item>
+        <item>@string/preferences_better</item>
+        <item>@string/preferences_high</item>
+        </string-array>
+    
+    <string-array name="entries_preference_image_values">
+        <item>900</item>
+        <item>1000</item>
+        <item>1200</item>
+        </string-array>
+    
+</resources>

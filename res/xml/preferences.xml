@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:summary="@string/preferences" >
+
+    <PreferenceCategory android:title="@string/preferences_network" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="background_upload"
+            android:summaryOff="@string/preferences_background_no"
+            android:summaryOn="@string/preferences_background_yes"
+            android:title="@string/preferences_use_background" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="delete_uploaded"
+            android:summaryOff="@string/preferences_delete_uploaded_no"
+            android:summaryOn="@string/preferences_delete_uploaded_yes"
+            android:title="@string/preferences_delete_uploaded" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preferences_audio" >
+
+        <!--
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="use_vorbis"
+            android:summaryOff="@string/preferences_vorbis_no"
+            android:summaryOn="@string/preferences_vorbis_yes"
+            android:title="@string/preferences_use_vorbis" />
+        -->
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/entries_preference_audio"
+            android:entryValues="@array/entries_preference_audio_values"
+            android:key="audio_quality"
+            android:summary="@string/preferences_increase_bandwidth"
+            android:title="@string/preferences_audio_quality" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preferences_camera" >
+        <ListPreference
+            android:defaultValue="900"
+            android:entries="@array/entries_preference_image"
+            android:entryValues="@array/entries_preference_image_values"
+            android:key="image_quality"
+            android:summary="@string/preferences_increase_bandwidth"
+            android:title="@string/preferences_image_quality" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="high_bright"
+            android:summaryOff="@string/preferences_high_bright_no"
+            android:summaryOn="@string/preferences_high_bright_use"
+            android:title="@string/preferences_high_bright" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="camera_panoramic"
+            android:summaryOff="@string/preferences_camera_full_no"
+            android:summaryOn="@string/preferences_camera_full_use"
+            android:title="@string/preferences_camera_full" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

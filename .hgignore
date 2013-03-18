@@ -1,0 +1,12 @@
+syntax: glob
+bin/*
+gen/*
+.settings/*
+*.o
+*.o.d
+*.so
+*.a
+*.old
+.dex
+.cvsignore/*
+.git/*

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/flash"
+        android:icon="@drawable/flash_automatic_selector"
+        android:showAsAction="ifRoom" android:title="Flash modes"/>
+    <item android:id="@+id/switch_camera"
+        android:icon="@drawable/switch_camera_selector"
+        android:showAsAction="ifRoom" android:title="Switch camera"/>
+    
+
+</menu>

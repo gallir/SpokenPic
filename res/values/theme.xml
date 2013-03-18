@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SpokenPic.Black" parent="Theme.Sherlock.ForceOverflow">
+        <item name="android:textViewStyle">@style/textViewAppearance</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:buttonStyle">@style/SpokenPic.Button</item>
+        <item name="actionBarStyle">@style/SpokenPic.Black.ActionBar</item>
+        <item name="android:actionBarStyle">@style/SpokenPic.Black.ActionBar</item>
+        <item name="actionBarTabStyle">@style/SpokenPic.Black.ActionBar.TabView</item>
+        <item name="android:actionBarTabStyle">@style/SpokenPic.Black.ActionBar.TabView</item>
+        <item name="actionBarTabBarStyle">@style/SpokenPic.Black.ActionBar.TabBar</item>
+        <item name="android:actionBarTabBarStyle">@style/SpokenPic.Black.ActionBar.TabBar</item>
+        <item name="actionOverflowButtonStyle">@style/SpokenPic.Black.ActionButton.Overflow</item>
+        <item name="android:actionOverflowButtonStyle">@style/SpokenPic.Black.ActionButton.Overflow</item>
+        <!--
+        <item name="actionDropDownStyle">@style/Widget.SpokenPic.Spinner.DropDown.ActionBar</item>
+        <item name="android:actionDropDownStyle">@style/Widget.SpokenPic.Spinner.DropDown.ActionBar</item>
+        -->
+        <item name="actionModePopupWindowStyle">@style/Widget.Sherlock.Light.PopupWindow.ActionMode</item>
+        <item name="actionBarItemBackground">@drawable/theme__item_background</item>
+        <item name="android:actionBarItemBackground">@drawable/theme__item_background</item>
+        <item name="dropDownListViewStyle">@style/Widget.SpokenPic.ListView.DropDown</item>
+        <item name="android:dropDownListViewStyle">@style/Widget.SpokenPic.ListView.DropDown</item>
+        <item name="listPopupWindowStyle">@style/Widget.SpokenPic.ListPopupWindow</item>
+        <item name="android:listPopupWindowStyle">@style/Widget.SpokenPic.ListPopupWindow</item>
+        <item name="popupMenuStyle">@style/Widget.SpokenPic.PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/Widget.SpokenPic.PopupMenu</item>
+    </style>
+
+    <style name="SpokenPic.Black.Main.DarkText" parent="SpokenPic.Black.Main">
+        <item name="android:textViewStyle">@style/darkTextAppearance</item>
+        <item name="android:editTextStyle">@style/darkEditTextAppearance</item>
+    </style>
+
+    <style name="SpokenPic.Black.ClipCreator" parent="SpokenPic.Black">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Styles for the theme -->
+    <style name="Styled.ActionBar.Black" parent="Widget.Sherlock.ActionBar.Solid">
+        <item name="background">@drawable/action_bar</item>
+        <item name="android:background">@drawable/action_bar</item>
+    </style>
+
+    <style name="SpokenPic.Button" parent="Widget.Sherlock.ActionButton">
+        <item name="android:background">@drawable/button_selector</item>
+    </style>
+
+    <style name="SpokenPic.Black.Main" parent="SpokenPic.Black">
+        <item name="android:windowBackground">@color/mainBackground</item>
+    </style>
+
+    <style name="SpokenPic.Black.ActionBar" parent="Widget.Sherlock.ActionBar.Solid">
+        <item name="background">@drawable/action_bar</item>
+        <item name="android:background">@drawable/action_bar</item>
+    </style>
+
+    <style name="SpokenPic.Black.ActionBar.TabBar" parent="Widget.Sherlock.ActionBar.TabBar"></style>
+
+    <style name="SpokenPic.Black.ActionBar.TabView" parent="Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">@drawable/theme__tab_indicator</item>
+    </style>
+
+    <style name="SpokenPic.Black.ActionButton.Overflow" parent="Widget.Sherlock.ActionButton.Overflow"></style>
+
+    <style name="Widget.SpokenPic.ListView.DropDown" parent="android:Widget.ListView">
+        <item name="android:divider">@drawable/theme__list_divider</item>
+        <item name="android:listSelector">@drawable/theme__list_selector</item>
+    </style>
+
+    <style name="Widget.SpokenPic.PopupMenu" parent="Widget.SpokenPic.ListPopupWindow"></style>
+
+    <style name="Widget.SpokenPic.ListPopupWindow" parent="Widget.Sherlock.ListPopupWindow">
+        <item name="android:dropDownSelector">@drawable/theme__list_selector</item>
+        <item name="android:popupBackground">@drawable/theme__menu_dropdown_panel</item>
+    </style>
+
+    <style name="SpokenPic.__Widget.Holo.Spinner" parent="Widget">
+        <item name="android:dropDownSelector">@drawable/theme__list_selector</item>
+        <item name="android:popupBackground">@drawable/theme__menu_dropdown_panel</item>
+        <item name="android:dropDownVerticalOffset">0dip</item>
+        <item name="android:dropDownHorizontalOffset">0dip</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="Widget.SpokenPic.Spinner.DropDown.ActionBar" parent="SpokenPic.__Widget.Holo.Spinner">
+        <item name="android:background">@drawable/abs__spinner_ab_holo_dark</item>
+    </style>
+
+</resources>

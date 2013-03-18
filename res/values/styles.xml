@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="GalleryItem">
+        <item name="android:background">?android:attr/galleryItemBackground</item>
+    </style>
+
+    <style name="loginText">
+        <item name="android:textColor">@color/redishText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="clipTextHeader">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/lightText</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="clipVotes">
+        <item name="android:textColor">@color/lightText</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="textViewAppearance">
+        <item name="android:background">@drawable/textview_selector</item>
+    </style>
+
+    <style name="darkTextAppearance">
+        <item name="android:textColor">@color/darkText</item>
+    </style>
+
+    <style name="darkEditTextAppearance" parent="@android:style/Widget.EditText">
+        <item name="android:textCursorDrawable">@drawable/black_cursor</item>
+        <item name="android:textColor">@color/darkText</item>
+        <item name="android:background">@drawable/edittext_selector</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="lightEditTextAppearance" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/lightText</item>
+        <item name="android:background">@drawable/edittext_light_selector</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+</resources>

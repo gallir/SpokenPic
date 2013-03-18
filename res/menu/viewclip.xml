@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/item_web"
+        android:icon="@drawable/ab_web"
+        android:showAsAction="always"
+        android:title="@string/web_page"/>
+    <item
+        android:id="@+id/item_private"
+        android:icon="@drawable/ab_not_secure"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/item_upload"
+        android:icon="@drawable/ab_upload"
+        android:showAsAction="always|withText"
+        android:title="@string/upload"/>
+    <item
+        android:id="@+id/item_delete"
+        android:icon="@drawable/ab_delete"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/delete"/>
+    <item
+        android:id="@+id/item_share"
+        android:actionProviderClass="com.actionbarsherlock.widget.ShareActionProvider"
+        android:icon="@drawable/ab_share"
+        android:showAsAction="ifRoom"
+        android:title="@string/share"/>
+
+</menu>

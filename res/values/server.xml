@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_server">spokenpic.com</string>
+    <string name="dev_server">rprototipe.apsl.net</string>
+    <bool name="use_ssl">true</bool>
+
+</resources>

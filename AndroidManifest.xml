@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.spokenpic"
+    android:installLocation="auto"
+    android:versionCode="26"
+    android:versionName="1.0.1 Treasure" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <application
+        android:name=".App"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_launcher2"
+        android:theme="@style/SpokenPic.Black" >
+        <activity
+            android:name=".ViewMain"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/SpokenPic.Black.Main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewClipCreator"
+            android:icon="@drawable/ic_launcher3"
+            android:label="@string/new_clip"
+            android:launchMode="singleTop"
+            android:taskAffinity=".ViewClipCreator"
+            android:theme="@style/SpokenPic.Black.ClipCreator" >
+            <intent-filter android:label="@string/app_camera" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewClipImporter"
+            android:theme="@style/SpokenPic.Black.ClipCreator" >
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewGallery"
+            android:label="@string/gallery" >
+        </activity>
+        <activity
+            android:name=".ViewClip"
+            android:label="@string/clip" >
+
+            <!-- android:uiOptions="splitActionBarWhenNarrow" -->
+        </activity>
+        <activity
+            android:name=".ViewRegister"
+            android:label="@string/register"
+            android:theme="@style/SpokenPic.Black.Main.DarkText" >
+        </activity>
+        <activity
+            android:name=".ViewLogin"
+            android:label="@string/login"
+            android:theme="@style/SpokenPic.Black.Main.DarkText" >
+        </activity>
+        <activity
+            android:name=".ViewChangePass"
+            android:label="@string/change_pass"
+            android:theme="@style/SpokenPic.Black.Main.DarkText" >
+        </activity>
+        <activity
+            android:name=".ViewWeb"
+            android:label="@string/profile" >
+        </activity>
+        <activity
+            android:name=".ViewTimeLineBrowser"
+            android:label="@string/timeline_viewer" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/dev_server"
+                    android:pathPattern="/.*/clips/.*"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/main_server"
+                    android:pathPattern="/.*/clips/.*"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/dev_server"
+                    android:pathPattern="/clips/.*"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/main_server"
+                    android:pathPattern="/clips/.*"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewClipBrowser"
+            android:label="@string/clip_viewer" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/dev_server"
+                    android:pathPattern="/.*/clip/.*"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/main_server"
+                    android:pathPattern="/.*/clip/.*"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/dev_server"
+                    android:pathPattern="/clip/.*"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/main_server"
+                    android:pathPattern="/clip/.*"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewPreferences"
+            android:label="@string/preferences" >
+        </activity>
+
+        <service android:name=".ClipUploaderService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cameraPreviewMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <SurfaceView
+        android:id="@+id/cameraSurface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/preview"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/cameraPreviewMain1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/cameraThumb"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/background_pressed"
+            android:contentDescription="@string/thumbnail"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/cameraSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/switch_camera"
+            android:src="@drawable/switch_camera_selector" />
+
+        <ImageView
+            android:id="@+id/recordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/saveButton"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/record_stop_audio"
+            android:src="@drawable/mic_selector" />
+
+        <ImageView
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/save_clip"
+            android:src="@drawable/ok_selector" />
+
+        <ImageView
+            android:id="@+id/cameraFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cameraSwitch"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/cameraSwitch"
+            android:contentDescription="@string/flash_type"
+            android:src="@drawable/flash_automatic_selector" />
+
+        <ImageView
+            android:id="@+id/cameraFocus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cameraSwitch"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/cameraFlash"
+            android:contentDescription="@string/focus_mode"
+            android:src="@drawable/focus_auto_selector" />
+
+        <ImageView
+            android:id="@+id/shutterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/take_photo"
+            android:src="@drawable/take_photo_selector" />
+
+        <!--
+    <ProgressBar
+        android:id="@+id/audioProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/shutterButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+        -->
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/saveButton"
+            android:layout_toLeftOf="@+id/shutterButton"
+            android:layout_toRightOf="@+id/recordButton"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/playButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/play_stop_audio"
+                android:src="@drawable/play_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/saveButton"
+            android:layout_toLeftOf="@+id/saveButton"
+            android:layout_toRightOf="@+id/shutterButton"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/galleryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/pick_from_gallery"
+                android:src="@drawable/gallery_selector" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/progressCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/shutterButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/cameraThumb"
+            android:gravity="right"
+            android:shadowColor="#000000"
+            android:shadowRadius="1.3"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#B64310"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+    </RelativeLayout>
+
+</RelativeLayout>
